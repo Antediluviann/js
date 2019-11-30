@@ -49,9 +49,19 @@ var numbD = 0;
 
 var numbE = 13;
 
-if (numbC >= numbA, numbC >= numbB, numbC >= numbD, numbC >= numbE) {
+if (numbA >= numbB && numbA >= numbC && numbA >= numbD && numbA >= numbE) {
+	console.log(numbA + " is the largest number amongst these numbers");
+} else if (numbB >= numbA && numbB >= numbC && numbB >= numbD && numbB >= numbE) {
+	console.log(numbB + " is the largest number amongst these numbers");
+} else if (numbC >= numbA && numbC >= numbB && numbC >= numbD && numbC >= numbE) {
 	console.log(numbC + " is the largest number amongst these numbers");
+} else if (numbD >= numbA && numbD >= numbB && numbD >= numbC && numbD >= numbE) {
+	console.log(numbD + " is the largest number amongst these numbers");
+} else {
+	console.log(numbE + " is the largest number amongst these numbers");
 }
+
+
 
 // 2. Zadatak
 
@@ -61,12 +71,13 @@ var rarB = -7;
 
 var rarC = 2;
 
-var product = rarA * rarB * rarC
+if (rarA * rarB * rarC > 0) {
+	console.log("+")
+} else {
+	console.log("-")
+};
 
-if ( rarA * rarB * rarC ) {
-	console.log(product);
-	console.log("The sign is -")
-}
+
 
 // 3. Zadatak
 
@@ -74,15 +85,15 @@ var name = "English";
 
 switch (name) {
 	case "English":
-	   console.log("Hello World");
+	console.log("Hello World");
 	case "German":
-	   console.log("Hallo Welt");   
+	console.log("Hallo Welt");   
 	case "Russian":
-	   console.log("Привет, Mир");   
+	console.log("Привет, Mир");   
 	case "Japan":
-	   console.log("Kon'nichiwa Sekai");
-	case "Serbian":
-	   console.log("Zdravo Svete");      
+	console.log("Kon'nichiwa Sekai");
+	case "default":
+	console.log("Zdravo Svete");      
 }
 
 // 4. Zadatak
