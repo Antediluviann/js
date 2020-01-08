@@ -232,5 +232,130 @@ for (var i = 0; i < a; i++) {
 } console.log(star);
 
 
+// FUNCTIONS HOMEWORK
+
+//TASK 1: Create a function that should receive an array, and return an array in reverse order. Result should be stored in a variable
+
+function arr(names) {
+
+	var reverse = [];
+
+	for (var i = names.length - 1; i >= 0; i--) {
+		reverse[names.length - 1 - i] = names[i];
+	}
+
+	console.log(reverse);
+}
+
+arr(["John", "Mike", "Jack", "Peter"]);
+
+//TASK 2: Create a function that should receive parameter of any type, and console log the type of received data
+
+function dType(type) {
+
+	console.log("The type of data is " + typeof type)
+};
+
+dType("Vlad the Impaler");
+dType(true);
+dType(1389);
+
+//TASK 3: Create a function that should receive an array of at least five names, and return the length of the longest name in the array (hint - you can get the length of an string the same way as for array). Result should be stored in a variable
+
+function club(fiveNames) {
+
+	var longName = "";
+
+	for (var i = 0; i < fiveNames.length; i++) {
+
+		if (fiveNames[i].length > longName.length) {
+			longName = fiveNames[i];
+		}
+	}
+	console.log("The longest name is " + longName);
+}
+
+club(["Denver Nuggets", "Dallas Maverics", "Sacremento Kings", "Toronto Raptors", "Chicago Bulls"]);
+
+//TASK 4: Create a function that should receive an array of numbers, find the second lowest and second greatest number, and console log result
+
+
+function secondLowestNumb(numbers) {
+	var lowestNumber = numbers[0];
+	var secondLowest = numbers[1];
+
+	if (secondLowest < lowestNumber) {
+		var temoporary = lowestNumber;
+		lowestNumber = secondLowest;
+		secondLowest = temoporary;
+
+	} for (var i = 0; i < numbers.length; i++) {
+		if (numbers[i] < lowestNumber) {
+			lowestNumber = numbers[i];
+
+	} else if (numbers[i] < secondLowest && numbers[i] > lowestNumber) {
+		secondLowest = numbers[i];
+		}
+	}
+	return secondLowest;
+}
+
+function secondGreatestNumb(numbers) {
+	var greatestNumber = numbers[0];
+	var secondGreatest = numbers[1];
+
+	if (secondGreatest > greatestNumber) {
+		var temoporary = greatestNumber;
+		greatestNumber = secondGreatest;
+		secondGreatest = temoporary;
+	
+	} for (var i = 0; i < numbers.length; i++) {
+		if (numbers[i] > greatestNumber) {
+			greatestNumber = numbers[i];
+
+	} else if (numbers[i] > secondGreatest && numbers[i] < greatestNumber) {
+		secondGreatest = numbers[i];
+		}
+	}
+	return secondGreatest;
+}
+
+function getBothNumbers(numbers) {
+	var secondLowest = secondLowestNumb(numbers);
+	var secondLargest = secondGreatestNumb(numbers);
+
+	var values = [secondLowest, secondLargest];
+
+	console.log(values);
+
+	return values;
+}
+
+getBothNumbers([43, 75, 15, 64, 18, 122, 7, 33]);
+
+
+//TASK 5: Create two functions. First one should receive two parameters, an array of numbers, and a single number. Then it should call the second function, and pass the same array and number into it. The second function should, based on an array and number provided, find all numbers in an array which are bigger then a provided number, and create an array of those numbers. Then it should console log result.
+
+
+function firstFunc(arr, numbers) {
+
+	var firstArr = [];
+
+	for (var i = 0; i < arr.length; i++) {
+		if (arr[i] > numbers) {
+			firstArr[firstArr.length] = arr[i];
+		}
+	}
+	return firstArr;
+}
+
+function secondFunc(arr, numbers) {
+
+	var greaterNumbers = firstFunc(arr, numbers);
+
+	console.log(greaterNumbers);
+}
+
+secondFunc([3, 17, 42, 31, 28, 12], 15);
 
 
