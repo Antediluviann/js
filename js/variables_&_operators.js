@@ -368,118 +368,320 @@
 
 // Third function should receive first two functions, and should multiply the result of the first function with the result of the second function. Then it should console log the result.
 
-var numArr = [7, 5, 14, 23, 121, 99];
+// var numArr = [7, 5, 14, 23, 121, 99];
 
-function min(numArr) {
+// function min(numArr) {
 
-	var minNumber = numArr[0];
+// 	var minNumber = numArr[0];
 
-	for(i = 0; i < numArr.length; i++) {
-		if(typeof minNumber === "number" && typeof numArr[i] === "number") {
-			if(minNumber < numArr[i]) {
-				minNumber = minNumber;
-			} else if (minNumber === numArr[i]) {
-				minNumber = minNumber;
-			} else if (minNumber > numArr[i]) {
-				minNumber = numArr[i];
-			}
-		}
-	}
-	return minNumber;
-}
+// 	for(i = 0; i < numArr.length; i++) {
+// 		if(typeof minNumber === "number" && typeof numArr[i] === "number") {
+// 			if(minNumber < numArr[i]) {
+// 				minNumber = minNumber;
+// 			} else if (minNumber === numArr[i]) {
+// 				minNumber = minNumber;
+// 			} else if (minNumber > numArr[i]) {
+// 				minNumber = numArr[i];
+// 			}
+// 		}
+// 	}
+// 	return minNumber;
+// }
 
-function max(numArr) {
+// function max(numArr) {
 
-	var maxNumb = numArr[0];
+// 	var maxNumb = numArr[0];
 
-	for(i = 0; i < numArr.length; i++) {
+// 	for(i = 0; i < numArr.length; i++) {
 
-		if(typeof maxNumb === "number" && typeof numArr[i] === "number") {
-			if(maxNumb > numArr[i]) {
-				maxNumb = maxNumb;
-			} else if (maxNumb < numArr[i]) {
-				maxNumb = numArr[i];
-			} else if (maxNumb === numArr[i]) {
-				maxNumb = maxNumb;
-			}
-		}
-	}
-	return maxNumb;
-}
+// 		if(typeof maxNumb === "number" && typeof numArr[i] === "number") {
+// 			if(maxNumb > numArr[i]) {
+// 				maxNumb = maxNumb;
+// 			} else if (maxNumb < numArr[i]) {
+// 				maxNumb = numArr[i];
+// 			} else if (maxNumb === numArr[i]) {
+// 				maxNumb = maxNumb;
+// 			}
+// 		}
+// 	}
+// 	return maxNumb;
+// }
 
-function multiply(min, max) {
+// function multiply(min, max) {
 
-	var result = min(numArr) * max(numArr);
+// 	var result = min(numArr) * max(numArr);
 
-	console.log(result);
-}
+// 	console.log(result);
+// }
 
-multiply(min, max);
-
-
+// multiply(min, max);
 
 
-// TASK 7:
-
-// Create a function that should receive an array and the second function.
-
-// Array should be:
-
-// [15, 35, 46, 23, 15, 17, 23, 24, 35, 12, 72, 64, 35, 22, 64]
-
-// After array is received you should find all numbers from array which are unique, and create a new array out of them.
-
-// Then, the second function that is passed in the first one should be called, and it should receive this new array we created. It should then delete the biggest number in the array, and console log the result (array).
 
 
-var numbArr = [15, 35, 46, 23, 15, 17, 23, 24, 35, 12, 72, 64, 35, 22, 64];
+// // TASK 7:
 
-var deleteBiggest = function (uniNumbers) {
+// // Create a function that should receive an array and the second function.
 
-	var bigNumb = uniNumbers[0];
+// // Array should be:
 
-	for(i = 0; i < uniNumbers.length; i++) {
-		if(bigNumb > uniNumbers[i]) {
-			bigNumb = bigNumb;
-		} else if(bigNumb < uniNumbers[i]) {
-			bigNumb = uniNumbers[i];
-		} else if(bigNumb = uniNumbers[i]) {
-			bigNumb = bigNumb;
-		}
-	}
+// // [15, 35, 46, 23, 15, 17, 23, 24, 35, 12, 72, 64, 35, 22, 64]
+
+// // After array is received you should find all numbers from array which are unique, and create a new array out of them.
+
+// // Then, the second function that is passed in the first one should be called, and it should receive this new array we created. It should then delete the biggest number in the array, and console log the result (array).
+
+
+// var numbArr = [15, 35, 46, 23, 15, 17, 23, 24, 35, 12, 72, 64, 35, 22, 64];
+
+// var deleteBiggest = function (uniNumbers) {
+
+// 	var bigNumb = uniNumbers[0];
+
+// 	for(i = 0; i < uniNumbers.length; i++) {
+// 		if(bigNumb > uniNumbers[i]) {
+// 			bigNumb = bigNumb;
+// 		} else if(bigNumb < uniNumbers[i]) {
+// 			bigNumb = uniNumbers[i];
+// 		} else if(bigNumb = uniNumbers[i]) {
+// 			bigNumb = bigNumb;
+// 		}
+// 	}
 	
 
-	for(i = 0; i < uniNumbers.length; i++) {
-		if(bigNumb == uniNumbers[i]) {
-			delete uniNumbers[i];
-		}
-	}
+// 	for(i = 0; i < uniNumbers.length; i++) {
+// 		if(bigNumb == uniNumbers[i]) {
+// 			delete uniNumbers[i];
+// 		}
+// 	}
 
-	console.log(uniNumbers);
+// 	console.log(uniNumbers);
+
+// }
+
+// var printArr = function(numbArr, deleteBiggest) {
+
+// 	var uniNumbers = [];
+	
+
+// 	for(i = 0; i < numbArr.length; i++) {
+// 		var k = 0;
+// 		if(typeof numbArr[i] === "number" ) {
+// 			for(j = 0; j < numbArr.length; j++) {
+// 				if(numbArr[i] == numbArr[j]) {
+// 					k = k + 1;		
+// 				} 
+// 			}
+// 			if(k < 2) {
+// 				uniNumbers[uniNumbers.length] = numbArr[i];
+// 			}
+// 		} 		
+// 	}
+
+//  deleteBiggest(uniNumbers);
+	
+// }
+
+// printArr(numbArr, deleteBiggest);
+
+// OBJECT HOMEWORK
+
+
+// TASK 1: Based on existing object: Create a function which should change age to 34, and delete married property. In the end console.log object.
+
+var person = {
+
+	name : 'Mike',
+	age : 28,
+	married : true
 
 }
 
-var printArr = function(numbArr, deleteBiggest) {
+function valueChange(person, age) {
 
-	var uniNumbers = [];
-	
-
-	for(i = 0; i < numbArr.length; i++) {
-		var k = 0;
-		if(typeof numbArr[i] === "number" ) {
-			for(j = 0; j < numbArr.length; j++) {
-				if(numbArr[i] == numbArr[j]) {
-					k = k + 1;		
-				} 
-			}
-			if(k < 2) {
-				uniNumbers[uniNumbers.length] = numbArr[i];
-			}
-		} 		
+	if(person.age !== age){
+		person.age = age;
 	}
 
- deleteBiggest(uniNumbers);
-	
+return person;
+
 }
 
-printArr(numbArr, deleteBiggest);
+
+function finderertyDelete(person) {
+
+	if(person.married === true || person.married === false) {
+
+		delete person.married;
+	}
+
+return person;
+
+}
+
+
+function deleteFunc(person, age) {
+
+	valueChange(person, age);
+	finderertyDelete(person)
+
+	console.log(person)
+}
+
+deleteFunc(person, 34)
+
+
+// TASK 2: Based on existing object: Create a function which should check if person has children findererty, if not add it. Its value should be array containing two objects with children data. Each object should contain child name, age and gender.
+
+var persons = {
+
+	name: "Jack",
+	age: 32,
+	married: true	
+}
+
+var children = [
+	
+	{
+		name: "Bobo",
+		age: 7,
+		gender: "Male"
+	},
+	{
+		name: 'Stevanita',
+		age: 4,
+		gender: "Female"
+	}
+]
+
+function kids(persons, children) {
+
+	if(persons.children === undefined){
+
+		addKids(persons, children);
+	} 
+
+	console.log(persons);
+
+}
+
+function addKids(persons,children) {
+	
+	persons.children = children;
+
+	return persons;
+}
+
+kids(persons, children);
+
+// TASK 3: Based on existing object: Create a function which should console.log if student passed exam, result should be something like: "Jack passed exam" or "Mike didn't pass exam"
+
+var students = [ 
+   {
+       name: 'Mike',
+       age: 28,
+       passed: false
+   },
+   {
+       name: 'Anna',
+       age: 23,
+       passed: true
+   },
+   {
+       name: 'Jack',
+       age: 32,
+       passed: true
+   },
+];
+
+function print(text) {
+
+	console.log(text);
+}
+
+function exam(students) {
+
+	for(i = 0; i < students.length; i++) {
+		students[i].passed ? print(students[i].name + ' passed exam.') : print(students[i].name + " didn't passed exam.");
+	}
+}
+
+exam(students);
+
+// TASK 4: Based on existing object: Create a function which should repack existing data into three arrays, names, ages, and passed. Example of names array: var names = ['Mike', 'Anna', 'Jack'];
+
+function repack(finder, students) {
+
+	var data = [];	
+	
+    for(i = 0; i < students.length; i++) {
+		
+			data[i] = students[i][finder];
+		}	
+	
+	return data;
+}
+
+
+function gettData(students) {
+
+	var names = repack("name", students);
+	var ages = repack("age", students);
+	var exams = repack("passed", students);
+
+	console.log(names, ages, exams);
+}
+
+gettData(students);
+
+// TASK 5: Based on existing object: Create the other object which should inherit data from existing object. Then console.log age by accessing the newly created object.
+
+var person = {
+	name: "Jack",
+	age: 32,
+	married: true
+}
+
+var newObject = Object.create(person);
+
+function inheritData(newObject, person) {
+    
+    newObject.age === person.age;
+	newObject.name === person.name;
+	newObject.married === person.married;
+
+	console.log(newObject.age)
+}
+
+inheritData(newObject, person);
+
+// TASK 6: Based on existing object: Create a method which, when called, should console.log name and age of existing object.
+
+var person = {
+
+	name: "Mike",
+	age: 28,
+	married: true,
+	print: function(age, name) {
+
+		console.log(this.name, this.age)
+	}
+}
+
+person.print(person.name, person.age);
+
+// TASK 6: Based on existing object: Create a method which should create name, age and married properties in existing object, based on parameters passed in method.
+
+var person = {
+
+	addMeth: function(name, age, married) {
+
+		this.name = name;
+		this.age = age;
+		this.married = married;
+	}
+};
+
+person.addMeth("Vlad the Impaler", 31, false)
+
+console.log(person)
