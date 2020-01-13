@@ -50,15 +50,15 @@
 // var numbE = 13;
 
 // if (numbA >= numbB && numbA >= numbC && numbA >= numbD && numbA >= numbE) {
-// 	console.log(numbA + " is the largest number amongst these numbers");
+// 	console.log(numbA + " is the largest number amongst these numb");
 // } else if (numbB >= numbA && numbB >= numbC && numbB >= numbD && numbB >= numbE) {
-// 	console.log(numbB + " is the largest number amongst these numbers");
+// 	console.log(numbB + " is the largest number amongst these numb");
 // } else if (numbC >= numbA && numbC >= numbB && numbC >= numbD && numbC >= numbE) {
-// 	console.log(numbC + " is the largest number amongst these numbers");
+// 	console.log(numbC + " is the largest number amongst these numb");
 // } else if (numbD >= numbA && numbD >= numbB && numbD >= numbC && numbD >= numbE) {
-// 	console.log(numbD + " is the largest number amongst these numbers");
+// 	console.log(numbD + " is the largest number amongst these numb");
 // } else {
-// 	console.log(numbE + " is the largest number amongst these numbers");
+// 	console.log(numbE + " is the largest number amongst these numb");
 // }
 
 
@@ -277,52 +277,52 @@
 
 // club(["Denver Nuggets", "Dallas Maverics", "Sacremento Kings", "Toronto Raptors", "Chicago Bulls"]);
 
-// //TASK 4: Create a function that should receive an array of numbers, find the second lowest and second greatest number, and console log result
+// //TASK 4: Create a function that should receive an array of numb, find the second lowest and second greatest number, and console log result
 
 
-// function secondLowestNumb(numbers) {
-// 	var lowestNumber = numbers[0];
-// 	var secondLowest = numbers[1];
+// function secondLowestNumb(numb) {
+// 	var lowestNumber = numb[0];
+// 	var secondLowest = numb[1];
 
 // 	if (secondLowest < lowestNumber) {
 // 		var temoporary = lowestNumber;
 // 		lowestNumber = secondLowest;
 // 		secondLowest = temoporary;
 
-// 	} for (var i = 0; i < numbers.length; i++) {
-// 		if (numbers[i] < lowestNumber) {
-// 			lowestNumber = numbers[i];
+// 	} for (var i = 0; i < numb.length; i++) {
+// 		if (numb[i] < lowestNumber) {
+// 			lowestNumber = numb[i];
 
-// 	} else if (numbers[i] < secondLowest && numbers[i] > lowestNumber) {
-// 		secondLowest = numbers[i];
+// 	} else if (numb[i] < secondLowest && numb[i] > lowestNumber) {
+// 		secondLowest = numb[i];
 // 		}
 // 	}
 // 	return secondLowest;
 // }
 
-// function secondGreatestNumb(numbers) {
-// 	var greatestNumber = numbers[0];
-// 	var secondGreatest = numbers[1];
+// function secondGreatestNumb(numb) {
+// 	var greatestNumber = numb[0];
+// 	var secondGreatest = numb[1];
 
 // 	if (secondGreatest > greatestNumber) {
 // 		var temoporary = greatestNumber;
 // 		greatestNumber = secondGreatest;
 // 		secondGreatest = temoporary;
 	
-// 	} for (var i = 0; i < numbers.length; i++) {
-// 		if (numbers[i] > greatestNumber) {
-// 			greatestNumber = numbers[i];
+// 	} for (var i = 0; i < numb.length; i++) {
+// 		if (numb[i] > greatestNumber) {
+// 			greatestNumber = numb[i];
 
-// 	} else if (numbers[i] > secondGreatest && numbers[i] < greatestNumber) {
-// 		secondGreatest = numbers[i];
+// 	} else if (numb[i] > secondGreatest && numb[i] < greatestNumber) {
+// 		secondGreatest = numb[i];
 // 		}
 // 	}
 // 	return secondGreatest;
 // }
 
-// function getBothNumbers(numbers) {
-// 	var secondLowest = secondLowestNumb(numbers);
-// 	var secondLargest = secondGreatestNumb(numbers);
+// function getBothnumb(numb) {
+// 	var secondLowest = secondLowestNumb(numb);
+// 	var secondLargest = secondGreatestNumb(numb);
 
 // 	var values = [secondLowest, secondLargest];
 
@@ -331,29 +331,29 @@
 // 	return values;
 // }
 
-// getBothNumbers([43, 75, 15, 64, 18, 122, 7, 33]);
+// getBothnumb([43, 75, 15, 64, 18, 122, 7, 33]);
 
 
-// //TASK 5: Create two functions. First one should receive two parameters, an array of numbers, and a single number. Then it should call the second function, and pass the same array and number into it. The second function should, based on an array and number provided, find all numbers in an array which are bigger then a provided number, and create an array of those numbers. Then it should console log result.
+// //TASK 5: Create two functions. First one should receive two parameters, an array of numb, and a single number. Then it should call the second function, and pass the same array and number into it. The second function should, based on an array and number provided, find all numb in an array which are bigger then a provided number, and create an array of those numb. Then it should console log result.
 
 
-// function firstFunc(arr, numbers) {
+// function firstFunc(arr, numb) {
 
 // 	var firstArr = [];
 
 // 	for (var i = 0; i < arr.length; i++) {
-// 		if (arr[i] > numbers) {
+// 		if (arr[i] > numb) {
 // 			firstArr[firstArr.length] = arr[i];
 // 		}
 // 	}
 // 	return firstArr;
 // }
 
-// function secondFunc(arr, numbers) {
+// function secondFunc(arr, numb) {
 
-// 	var greaterNumbers = firstFunc(arr, numbers);
+// 	var greaternumb = firstFunc(arr, numb);
 
-// 	console.log(greaterNumbers);
+// 	console.log(greaternumb);
 // }
 
 // secondFunc([3, 17, 42, 31, 28, 12], 15);
@@ -427,41 +427,41 @@
 
 // // [15, 35, 46, 23, 15, 17, 23, 24, 35, 12, 72, 64, 35, 22, 64]
 
-// // After array is received you should find all numbers from array which are unique, and create a new array out of them.
+// // After array is received you should find all numb from array which are unique, and create a new array out of them.
 
 // // Then, the second function that is passed in the first one should be called, and it should receive this new array we created. It should then delete the biggest number in the array, and console log the result (array).
 
 
 // var numbArr = [15, 35, 46, 23, 15, 17, 23, 24, 35, 12, 72, 64, 35, 22, 64];
 
-// var deleteBiggest = function (uniNumbers) {
+// var deleteBiggest = function (uninumb) {
 
-// 	var bigNumb = uniNumbers[0];
+// 	var bigNumb = uninumb[0];
 
-// 	for(i = 0; i < uniNumbers.length; i++) {
-// 		if(bigNumb > uniNumbers[i]) {
+// 	for(i = 0; i < uninumb.length; i++) {
+// 		if(bigNumb > uninumb[i]) {
 // 			bigNumb = bigNumb;
-// 		} else if(bigNumb < uniNumbers[i]) {
-// 			bigNumb = uniNumbers[i];
-// 		} else if(bigNumb = uniNumbers[i]) {
+// 		} else if(bigNumb < uninumb[i]) {
+// 			bigNumb = uninumb[i];
+// 		} else if(bigNumb = uninumb[i]) {
 // 			bigNumb = bigNumb;
 // 		}
 // 	}
 	
 
-// 	for(i = 0; i < uniNumbers.length; i++) {
-// 		if(bigNumb == uniNumbers[i]) {
-// 			delete uniNumbers[i];
+// 	for(i = 0; i < uninumb.length; i++) {
+// 		if(bigNumb == uninumb[i]) {
+// 			delete uninumb[i];
 // 		}
 // 	}
 
-// 	console.log(uniNumbers);
+// 	console.log(uninumb);
 
 // }
 
 // var printArr = function(numbArr, deleteBiggest) {
 
-// 	var uniNumbers = [];
+// 	var uninumb = [];
 	
 
 // 	for(i = 0; i < numbArr.length; i++) {
@@ -473,12 +473,12 @@
 // 				} 
 // 			}
 // 			if(k < 2) {
-// 				uniNumbers[uniNumbers.length] = numbArr[i];
+// 				uninumb[uninumb.length] = numbArr[i];
 // 			}
 // 		} 		
 // 	}
 
-//  deleteBiggest(uniNumbers);
+//  deleteBiggest(uninumb);
 	
 // }
 
@@ -489,199 +489,418 @@
 
 // TASK 1: Based on existing object: Create a function which should change age to 34, and delete married property. In the end console.log object.
 
-var person = {
+// var person = {
 
-	name : 'Mike',
-	age : 28,
-	married : true
+// 	name : 'Mike',
+// 	age : 28,
+// 	married : true
 
-}
+// }
 
-function valueChange(person, age) {
+// function valueChange(person, age) {
 
-	if(person.age !== age){
-		person.age = age;
+// 	if(person.age !== age){
+// 		person.age = age;
+// 	}
+
+// return person;
+
+// }
+
+
+// function finderertyDelete(person) {
+
+// 	if(person.married === true || person.married === false) {
+
+// 		delete person.married;
+// 	}
+
+// return person;
+
+// }
+
+
+// function deleteFunc(person, age) {
+
+// 	valueChange(person, age);
+// 	finderertyDelete(person)
+
+// 	console.log(person)
+// }
+
+// deleteFunc(person, 34)
+
+
+// // TASK 2: Based on existing object: Create a function which should check if person has children findererty, if not add it. Its value should be array containing two objects with children data. Each object should contain child name, age and gender.
+
+// var persons = {
+
+// 	name: "Jack",
+// 	age: 32,
+// 	married: true	
+// }
+
+// var children = [
+	
+// 	{
+// 		name: "Bobo",
+// 		age: 7,
+// 		gender: "Male"
+// 	},
+// 	{
+// 		name: 'Stevanita',
+// 		age: 4,
+// 		gender: "Female"
+// 	}
+// ]
+
+// function kids(persons, children) {
+
+// 	if(persons.children === undefined){
+
+// 		addKids(persons, children);
+// 	} 
+
+// 	console.log(persons);
+
+// }
+
+// function addKids(persons,children) {
+	
+// 	persons.children = children;
+
+// 	return persons;
+// }
+
+// kids(persons, children);
+
+// // TASK 3: Based on existing object: Create a function which should console.log if student passed exam, result should be something like: "Jack passed exam" or "Mike didn't pass exam"
+
+// var students = [ 
+//    {
+//        name: 'Mike',
+//        age: 28,
+//        passed: false
+//    },
+//    {
+//        name: 'Anna',
+//        age: 23,
+//        passed: true
+//    },
+//    {
+//        name: 'Jack',
+//        age: 32,
+//        passed: true
+//    },
+// ];
+
+// function print(text) {
+
+// 	console.log(text);
+// }
+
+// function exam(students) {
+
+// 	for(i = 0; i < students.length; i++) {
+// 		students[i].passed ? print(students[i].name + ' passed exam.') : print(students[i].name + " didn't passed exam.");
+// 	}
+// }
+
+// exam(students);
+
+// // TASK 4: Based on existing object: Create a function which should repack existing data into three arrays, names, ages, and passed. Example of names array: var names = ['Mike', 'Anna', 'Jack'];
+
+// function repack(finder, students) {
+
+// 	var data = [];	
+	
+//     for(i = 0; i < students.length; i++) {
+		
+// 			data[i] = students[i][finder];
+// 		}	
+	
+// 	return data;
+// }
+
+
+// function gettData(students) {
+
+// 	var names = repack("name", students);
+// 	var ages = repack("age", students);
+// 	var exams = repack("passed", students);
+
+// 	console.log(names, ages, exams);
+// }
+
+// gettData(students);
+
+// // TASK 5: Based on existing object: Create the other object which should inherit data from existing object. Then console.log age by accessing the newly created object.
+
+// var person = {
+// 	name: "Jack",
+// 	age: 32,
+// 	married: true
+// }
+
+// var newObject = Object.create(person);
+
+// function inheritData(newObject, person) {
+    
+//     newObject.age === person.age;
+// 	newObject.name === person.name;
+// 	newObject.married === person.married;
+
+// 	console.log(newObject.age)
+// }
+
+// inheritData(newObject, person);
+
+// // TASK 6: Based on existing object: Create a method which, when called, should console.log name and age of existing object.
+
+// var person = {
+
+// 	name: "Mike",
+// 	age: 28,
+// 	married: true,
+// 	print: function(age, name) {
+
+// 		console.log(this.name, this.age)
+// 	}
+// }
+
+// person.print(person.name, person.age);
+
+// // TASK 7: Based on existing object: Create a method which should create name, age and married properties in existing object, based on parameters passed in method.
+
+// var person = {
+
+// 	addMeth: function(name, age, married) {
+
+// 		this.name = name;
+// 		this.age = age;
+// 		this.married = married;
+// 	}
+// };
+
+// person.addMeth("Vlad the Impaler", 31, false)
+
+// console.log(person)
+
+// JS OBJECTS NASLEDJIVANJE
+
+// TASK 1: Create array with data, and loop through it, so in the end you console log this:
+
+var numb = [1,2,3]
+var count = 1;
+
+function counting(numb, count) {
+
+	for(i = 0; i < numb.length; i++) {
+		for(j = 0; j < numb.length; j++) {
+			console.log("At position "+ i +", subposition "+ j+", value is "+ count);
+			count ++;
+		}
 	}
-
-return person;
-
 }
 
+counting(numb, count);
 
-function finderertyDelete(person) {
+// TASK 2: Create a method that should console log name and age from any object. Then create array with multiple objects, each object should contain different names and ages. Call a method on each of them.
 
-	if(person.married === true || person.married === false) {
+Object.prototype.print = function() {
 
-		delete person.married;
+	var name = this.name;
+	var age = this.age;
+
+	console.log(name, age);
+}
+
+var arr = [
+	{
+		name: "Bobo",
+		age: 63
+	},
+	{
+		name: "Stevanita",
+		age: 13
+	},{
+		name: "Gandalf",
+		age: 999
 	}
+]
 
-return person;
+function printFunc(arr) {
 
+	for(i = 0; i < arr.length; i++) {
+		arr[i].print();
+	}
 }
 
+printFunc(arr);
 
-function deleteFunc(person, age) {
+// TASK 3: Create a function that should receive this object, and repack it to the new object where values from previous object represent both, keys and values of the new object.
 
-	valueChange(person, age);
-	finderertyDelete(person)
+var data = {
+	name: "Peter",
+	lastName: "Dinklage",
+	status: "married"
+};
+
+data.makeThis = makeThis;
+
+function makeThis() {
+	var person = {};
+
+	person[this.name] = this.name;
+	person[this.lastName] = this.lastName;
+	person[this.status] = this.status;
 
 	console.log(person)
 }
 
-deleteFunc(person, 34)
+data.makeThis();
 
+// TASK 4: Based on array: var someData = [13, 45, 56, [32, 11], 27, [55, 92]]; Create a function that should repack this array to another one where all numbers are contained in the same array, in the exact order like in provided array
 
-// TASK 2: Based on existing object: Create a function which should check if person has children findererty, if not add it. Its value should be array containing two objects with children data. Each object should contain child name, age and gender.
+var data = [13, 45, 56, [32, 11], 27, [55, 92]];
 
-var persons = {
+function repacking(data) {
+	var newArr = [];
 
-	name: "Jack",
-	age: 32,
-	married: true	
-}
-
-var children = [
-	
-	{
-		name: "Bobo",
-		age: 7,
-		gender: "Male"
-	},
-	{
-		name: 'Stevanita',
-		age: 4,
-		gender: "Female"
+	for(i = 0; i < data.length; i++) {
+		if( typeof data[i] === 'object') {
+			for(k = 0; k < data[i].length; k++){
+				newArr[newArr.length] = data[i][k];
+			}
+		} else {
+			newArr[newArr.length] = data[i];
+		}
 	}
-]
+	console.log(newArr)
+}
 
-function kids(persons, children) {
 
-	if(persons.children === undefined){
+repacking(data);
 
-		addKids(persons, children);
-	} 
 
-	console.log(persons);
+// TASK 5: Based on array: var someData = [13, 45, 56, [32, 11], 27, [55, 92]]; Create a function that should receive array, get both subarrays from parent array, and pass it into another function, which should then join those arrays. In the end result should be returned and stored in variable which contains first function.
+
+var someData = [13, 45, 56, [32, 11], 27, [55, 92]];
+
+function doSomething(someData) {
+
+	getTogether(someData, join(loop(someData)));
 
 }
 
-function addKids(persons,children) {
-	
-	persons.children = children;
+function loop(someData) {
+	var arr = [];
 
-	return persons;
-}
-
-kids(persons, children);
-
-// TASK 3: Based on existing object: Create a function which should console.log if student passed exam, result should be something like: "Jack passed exam" or "Mike didn't pass exam"
-
-var students = [ 
-   {
-       name: 'Mike',
-       age: 28,
-       passed: false
-   },
-   {
-       name: 'Anna',
-       age: 23,
-       passed: true
-   },
-   {
-       name: 'Jack',
-       age: 32,
-       passed: true
-   },
-];
-
-function print(text) {
-
-	console.log(text);
-}
-
-function exam(students) {
-
-	for(i = 0; i < students.length; i++) {
-		students[i].passed ? print(students[i].name + ' passed exam.') : print(students[i].name + " didn't passed exam.");
+	for(i = 0; i < someData.length; i++) {
+		if(typeof someData[i] === "object") {
+			arr[arr.length] = someData[i];
+		}
 	}
+
+	return arr;
+
 }
 
-exam(students);
+function join(arr) {
+	var arr3 = [];
 
-// TASK 4: Based on existing object: Create a function which should repack existing data into three arrays, names, ages, and passed. Example of names array: var names = ['Mike', 'Anna', 'Jack'];
-
-function repack(finder, students) {
-
-	var data = [];	
-	
-    for(i = 0; i < students.length; i++) {
-		
-			data[i] = students[i][finder];
-		}	
-	
-	return data;
-}
-
-
-function gettData(students) {
-
-	var names = repack("name", students);
-	var ages = repack("age", students);
-	var exams = repack("passed", students);
-
-	console.log(names, ages, exams);
-}
-
-gettData(students);
-
-// TASK 5: Based on existing object: Create the other object which should inherit data from existing object. Then console.log age by accessing the newly created object.
-
-var person = {
-	name: "Jack",
-	age: 32,
-	married: true
-}
-
-var newObject = Object.create(person);
-
-function inheritData(newObject, person) {
-    
-    newObject.age === person.age;
-	newObject.name === person.name;
-	newObject.married === person.married;
-
-	console.log(newObject.age)
-}
-
-inheritData(newObject, person);
-
-// TASK 6: Based on existing object: Create a method which, when called, should console.log name and age of existing object.
-
-var person = {
-
-	name: "Mike",
-	age: 28,
-	married: true,
-	print: function(age, name) {
-
-		console.log(this.name, this.age)
+	for(i = 0; i < arr.length; i++){
+		for(j = 0; j < arr[i].length; j++){
+			arr3[arr3.length] = arr[i][j];
+		}
 	}
+	return arr3;
+	
 }
 
-person.print(person.name, person.age);
+function getTogether(someData, someOtherData) {
 
-// TASK 6: Based on existing object: Create a method which should create name, age and married properties in existing object, based on parameters passed in method.
-
-var person = {
-
-	addMeth: function(name, age, married) {
-
-		this.name = name;
-		this.age = age;
-		this.married = married;
+	for(i = 0; i < someOtherData.length; i++) {
+		someData[someData.length] = someOtherData[i];
 	}
+	console.log(someData);
+}
+
+
+doSomething(someData);
+
+
+// TASK 6: Based on object: Create a function that should check if there is name in object, if yes it should return another function which should remove name from the function, if no then it should return a function which would set a name propery to the object, with the value passed once function is called.
+
+var someData = {
+	name: "Peter",
+	lastName: "Dinklage",
+	status: "married"
 };
 
-person.addMeth("Vlad the Impaler", 31, false)
 
-console.log(person)
+
+function name(someData) {
+
+	if(someData.name) {
+		deleteName(someData);
+	} else {
+		addName(someData);
+	}
+
+	console.log(someData);
+};
+
+
+
+function deleteName(someData) {
+
+	delete someData.name;
+};
+
+
+function addname(someData) {
+
+	someData.name = "Peter";
+};
+
+
+name(someData);
+
+// TASK 7: Create a method that should check if there is name in object, if yes it should create second method in the same object and then call it. The second method should remove name from the function, and console log the object in it's current state. The second method should then create a third method and call it. Third method should add name property back to the object, with value of "Mike", and then console log object.
+
+// BONUS: Try to set name with value it had before.
+
+var someData = {
+	name: "Peter",
+	lastName: "Dinklage",
+	status: "married"
+};
+
+console.log(someData);
+
+someData.name = function() {
+
+	if(someData.name) {
+		var name = someData.name;
+		
+		someData.removeName = function(name) {
+			this.name = name;
+			
+			delete someData.name;
+			console.log(someData)
+			
+			someData.addName = function(name) {
+				this.name = name;
+				someData.name = name;
+				console.log(someData);
+			}
+			someData.addName(name);
+		};
+		someData.removeName(name);
+	} 
+}
+
+someData.name();
+
+
