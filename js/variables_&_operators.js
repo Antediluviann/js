@@ -690,217 +690,434 @@
 
 // TASK 1: Create array with data, and loop through it, so in the end you console log this:
 
-var numb = [1,2,3]
-var count = 1;
+// var numb = [1,2,3]
+// var count = 1;
 
-function counting(numb, count) {
+// function counting(numb, count) {
 
-	for(i = 0; i < numb.length; i++) {
-		for(j = 0; j < numb.length; j++) {
-			console.log("At position "+ i +", subposition "+ j+", value is "+ count);
-			count ++;
-		}
-	}
+// 	for(i = 0; i < numb.length; i++) {
+// 		for(j = 0; j < numb.length; j++) {
+// 			console.log("At position "+ i +", subposition "+ j+", value is "+ count);
+// 			count ++;
+// 		}
+// 	}
+// }
+
+// counting(numb, count);
+
+// // TASK 2: Create a method that should console log name and age from any object. Then create array with multiple objects, each object should contain different names and ages. Call a method on each of them.
+
+// Object.prototype.print = function() {
+
+// 	var name = this.name;
+// 	var age = this.age;
+
+// 	console.log(name, age);
+// }
+
+// var arr = [
+// 	{
+// 		name: "Bobo",
+// 		age: 63
+// 	},
+// 	{
+// 		name: "Stevanita",
+// 		age: 13
+// 	},{
+// 		name: "Gandalf",
+// 		age: 999
+// 	}
+// ]
+
+// function printFunc(arr) {
+
+// 	for(i = 0; i < arr.length; i++) {
+// 		arr[i].print();
+// 	}
+// }
+
+// printFunc(arr);
+
+// // TASK 3: Create a function that should receive this object, and repack it to the new object where values from previous object represent both, keys and values of the new object.
+
+// var data = {
+// 	name: "Peter",
+// 	lastName: "Dinklage",
+// 	status: "married"
+// };
+
+// data.makeThis = makeThis;
+
+// function makeThis() {
+// 	var person = {};
+
+// 	person[this.name] = this.name;
+// 	person[this.lastName] = this.lastName;
+// 	person[this.status] = this.status;
+
+// 	console.log(person)
+// }
+
+// data.makeThis();
+
+// // TASK 4: Based on array: var someData = [13, 45, 56, [32, 11], 27, [55, 92]]; Create a function that should repack this array to another one where all numbers are contained in the same array, in the exact order like in provided array
+
+// var data = [13, 45, 56, [32, 11], 27, [55, 92]];
+
+// function repacking(data) {
+// 	var newArr = [];
+
+// 	for(i = 0; i < data.length; i++) {
+// 		if( typeof data[i] === 'object') {
+// 			for(k = 0; k < data[i].length; k++){
+// 				newArr[newArr.length] = data[i][k];
+// 			}
+// 		} else {
+// 			newArr[newArr.length] = data[i];
+// 		}
+// 	}
+// 	console.log(newArr)
+// }
+
+
+// repacking(data);
+
+
+// // TASK 5: Based on array: var someData = [13, 45, 56, [32, 11], 27, [55, 92]]; Create a function that should receive array, get both subarrays from parent array, and pass it into another function, which should then join those arrays. In the end result should be returned and stored in variable which contains first function.
+
+// var someData = [13, 45, 56, [32, 11], 27, [55, 92]];
+
+// function doSomething(someData) {
+
+// 	getTogether(someData, join(loop(someData)));
+
+// }
+
+// function loop(someData) {
+// 	var arr = [];
+
+// 	for(i = 0; i < someData.length; i++) {
+// 		if(typeof someData[i] === "object") {
+// 			arr[arr.length] = someData[i];
+// 		}
+// 	}
+
+// 	return arr;
+
+// }
+
+// function join(arr) {
+// 	var arr3 = [];
+
+// 	for(i = 0; i < arr.length; i++){
+// 		for(j = 0; j < arr[i].length; j++){
+// 			arr3[arr3.length] = arr[i][j];
+// 		}
+// 	}
+// 	return arr3;
+	
+// }
+
+// function getTogether(someData, someOtherData) {
+
+// 	for(i = 0; i < someOtherData.length; i++) {
+// 		someData[someData.length] = someOtherData[i];
+// 	}
+// 	console.log(someData);
+// }
+
+
+// doSomething(someData);
+
+
+// // TASK 6: Based on object: Create a function that should check if there is name in object, if yes it should return another function which should remove name from the function, if no then it should return a function which would set a name propery to the object, with the value passed once function is called.
+
+// var someData = {
+// 	name: "Peter",
+// 	lastName: "Dinklage",
+// 	status: "married"
+// };
+
+
+
+// function name(someData) {
+
+// 	if(someData.name) {
+// 		deleteName(someData);
+// 	} else {
+// 		addName(someData);
+// 	}
+
+// 	console.log(someData);
+// };
+
+
+
+// function deleteName(someData) {
+
+// 	delete someData.name;
+// };
+
+
+// function addname(someData) {
+
+// 	someData.name = "Peter";
+// };
+
+
+// name(someData);
+
+// // TASK 7: Create a method that should check if there is name in object, if yes it should create second method in the same object and then call it. The second method should remove name from the function, and console log the object in it's current state. The second method should then create a third method and call it. Third method should add name property back to the object, with value of "Mike", and then console log object.
+
+// // BONUS: Try to set name with value it had before.
+
+// var someData = {
+// 	name: "Peter",
+// 	lastName: "Dinklage",
+// 	status: "married"
+// };
+
+// console.log(someData);
+
+// someData.name = function() {
+
+// 	if(someData.name) {
+// 		var name = someData.name;
+		
+// 		someData.removeName = function(name) {
+// 			this.name = name;
+			
+// 			delete someData.name;
+// 			console.log(someData)
+			
+// 			someData.addName = function(name) {
+// 				this.name = name;
+// 				someData.name = name;
+// 				console.log(someData);
+// 			}
+// 			someData.addName(name);
+// 		};
+// 		someData.removeName(name);
+// 	} 
+// }
+
+// someData.name();
+
+
+// ADVANCED FUNCTIONS
+
+// TASK 1: Create a constructor function for generating student objects. Each student object should have name, last name, age and average grade.
+
+function student(student) {
+
+	this.name = student[0];
+	this.lastName = student[1];
+	this.age = student[2];
+	this.averageGrade = student[3];
 }
 
-counting(numb, count);
+var data = [
+	["Vlad", "The Impaler", 31, 8.5],
+	["Geralt", "of Rivia", 123, 9],
+	["Vesemir", "the Master", 325, 10],
+	["Yennefer", "of Vengerberg", 35, 6],
+];
 
-// TASK 2: Create a method that should console log name and age from any object. Then create array with multiple objects, each object should contain different names and ages. Call a method on each of them.
+function list(data) {
 
-Object.prototype.print = function() {
+	for(i = 0; i < data.length; i++) {
+		this[data[i][0].toLowerCase()] = new student(data[i]);
+	}
+};
 
-	var name = this.name;
-	var age = this.age;
+list(data);
 
-	console.log(name, age);
+console.log(vlad, geralt, vesemir, yennefer);
+
+// TASK 2: Create a constructor function for generating objects with data about players of your favorite football team (name, age, goals scored, yellow cards). You can find statistics online.
+
+function player(name, age, pointsScored, fouls) {
+
+	this.name = name;
+	this.age = age;
+	this.pointsScored = pointsScored;
+	this.fouls = fouls;
+}	
+
+var nikolaJokic = new player("Nikola", 24, 19.2, 3);
+var jamalMurray = new player("Jamal", 22, 17.6, 1.7);
+var garryHarris = new player("Garry", 27, 11, 2.4);
+var malikBeasly = new player("Malik", 23, 16.7, 1.2);
+var masonPlumlee = new player("Mason", 29, 7.3, 1);
+
+
+console.log(nikolaJokic, jamalMurray, garryHarris, malikBeasly, masonPlumlee);
+
+
+// TASK 3: Try to do the same thing as in the previous task, but when creating player objects try to do it dinammicaly (usign loop). For that you'll need data in following format: var players = [["Player name", 27, 12, 4], ["Player name", 27, 12, 4], ["Player name", 27, 12, 4]];
+
+function Player(player) {
+
+	this.name = player[0];
+	this.lastName = player[1];
+	this.age = player[2];
+	this.pointsScored = player[3];
+	this.fouls = player[4];
+}	
+
+var denver = [
+	["Nikola","Jokic", 24, 19.2, 3],
+	["Jamal","Murray", 22, 17.6, 1.7],
+	["Garry","Harris", 27, 11, 2.4],
+	["Malik","Beasly", 23, 16.7, 1.2],
+	["Mason","Plumlee", 29, 7.3, 1],
+];
+
+function topPlayers(players) {
+
+	for(i = 0; i < players.length; i++) {
+		this[players[i][0].toLowerCase() + "_" + players[i][1].toLowerCase()] = new Player(players[i]);
+	}
+};
+
+topPlayers(denver);
+
+console.log(nikola_jokic,jamal_murray,garry_harris,malik_beasly,mason_plumlee);
+
+
+//TASK 4: Create a construction function that should contain properties for first number, second number, and method. Then create a four instances of object from that constructor, each with different numbers, and different method. First should have method for multiplying of its own numbers, second for dividing, third for adding and fourth for subtracting.
+
+
+function calculus(item) {
+
+	this.firstNumber = item[0];
+	this.secondNumber = item[1];
+	this.sign = item[2];
+	this.operation = function(firstNumber, secondNumber, sign) {
+
+						var result;
+						if(this.sign === "-"){
+							result = this.firstNumber - this.secondNumber;
+						} else if(this.sign === "+") {
+							result = this.firstNumber + this.secondNumber;
+						} else if(this.sign === "/") {
+							result = this.firstNumber / this.secondNumber;
+						} else if(this.sign === "*") {
+							result = this.firstNumber * this.secondNumber;
+						}
+
+						return result;
+					}
 }
 
 var arr = [
-	{
-		name: "Bobo",
-		age: 63
-	},
-	{
-		name: "Stevanita",
-		age: 13
-	},{
-		name: "Gandalf",
-		age: 999
-	}
+
+	[11, 23, "*"],
+	[7, 3, "/"],
+	[17, 9, "+"],
+	[43, 69, "-"],
+
 ]
 
-function printFunc(arr) {
+for(var i = 0; i < arr.length; i++) {
+	this[name(i)] = new calculus(arr[i]);
+	console.log(this[name(i)]);
+}
 
-	for(i = 0; i < arr.length; i++) {
-		arr[i].print();
+function name(i) {
+	var orderedNumber;
+
+	if(i === 0) {
+		orderedNumber = "Zero";
+	} else if(i === 1) {
+		orderedNumber = "One";
+	} else if(i === 2) {
+		orderedNumber = "Two";
+	} else if(i ===3) {
+		orderedNumber = "Three";
 	}
+
+	return "object" + orderedNumber;
 }
 
-printFunc(arr);
+//TASK 5: Test your understanding of closures and scope with following examples. IMPORTANT! - First read the task and try to give an answer, and then copy the code to your file and check what do you get in console.
 
-// TASK 3: Create a function that should receive this object, and repack it to the new object where values from previous object represent both, keys and values of the new object.
+    // QUESTION 1:
 
-var data = {
-	name: "Peter",
-	lastName: "Dinklage",
-	status: "married"
-};
+	// What’s the result of executing this code and why? 
 
-data.makeThis = makeThis;
+	// ANSWER: The result is undefined because the return 2 is not defined.
 
-function makeThis() {
-	var person = {};
-
-	person[this.name] = this.name;
-	person[this.lastName] = this.lastName;
-	person[this.status] = this.status;
-
-	console.log(person)
-}
-
-data.makeThis();
-
-// TASK 4: Based on array: var someData = [13, 45, 56, [32, 11], 27, [55, 92]]; Create a function that should repack this array to another one where all numbers are contained in the same array, in the exact order like in provided array
-
-var data = [13, 45, 56, [32, 11], 27, [55, 92]];
-
-function repacking(data) {
-	var newArr = [];
-
-	for(i = 0; i < data.length; i++) {
-		if( typeof data[i] === 'object') {
-			for(k = 0; k < data[i].length; k++){
-				newArr[newArr.length] = data[i][k];
-			}
-		} else {
-			newArr[newArr.length] = data[i];
+		function test() {
+		   console.log(a);
+		   console.log(foo());
+		   
+		   var a = 1;
+		   function foo() {
+		      return 2;
+		   }
 		}
-	}
-	console.log(newArr)
-}
+
+		test();
 
 
-repacking(data);
+	// QUESTION 2:
 
+	// What is result?
 
-// TASK 5: Based on array: var someData = [13, 45, 56, [32, 11], 27, [55, 92]]; Create a function that should receive array, get both subarrays from parent array, and pass it into another function, which should then join those arrays. In the end result should be returned and stored in variable which contains first function.
+	// ANSWER: the result is 2
 
-var someData = [13, 45, 56, [32, 11], 27, [55, 92]];
+		var a = 1; 
 
-function doSomething(someData) {
-
-	getTogether(someData, join(loop(someData)));
-
-}
-
-function loop(someData) {
-	var arr = [];
-
-	for(i = 0; i < someData.length; i++) {
-		if(typeof someData[i] === "object") {
-			arr[arr.length] = someData[i];
+		function someFunction(number) {
+		  function otherFunction(input) {
+		    return a;
+		  }
+		  
+		  a = 5;
+		  
+		  return otherFunction;
 		}
-	}
 
-	return arr;
-
-}
-
-function join(arr) {
-	var arr3 = [];
-
-	for(i = 0; i < arr.length; i++){
-		for(j = 0; j < arr[i].length; j++){
-			arr3[arr3.length] = arr[i][j];
-		}
-	}
-	return arr3;
-	
-}
-
-function getTogether(someData, someOtherData) {
-
-	for(i = 0; i < someOtherData.length; i++) {
-		someData[someData.length] = someOtherData[i];
-	}
-	console.log(someData);
-}
+		var firstResult = someFunction(9);
+		var result = firstResult(2);
 
 
-doSomething(someData);
+	// QUESTION 3:
 
+	// What is the result of the following code? Explain your answer.
 
-// TASK 6: Based on object: Create a function that should check if there is name in object, if yes it should return another function which should remove name from the function, if no then it should return a function which would set a name propery to the object, with the value passed once function is called.
+	// ANSWER: the result is Aurelio De Rosa and John Doe. The first console log is getting an obj. prop from get full name function and the second console log is logging var test.
 
-var someData = {
-	name: "Peter",
-	lastName: "Dinklage",
-	status: "married"
-};
-
-
-
-function name(someData) {
-
-	if(someData.name) {
-		deleteName(someData);
-	} else {
-		addName(someData);
-	}
-
-	console.log(someData);
-};
-
-
-
-function deleteName(someData) {
-
-	delete someData.name;
-};
-
-
-function addname(someData) {
-
-	someData.name = "Peter";
-};
-
-
-name(someData);
-
-// TASK 7: Create a method that should check if there is name in object, if yes it should create second method in the same object and then call it. The second method should remove name from the function, and console log the object in it's current state. The second method should then create a third method and call it. Third method should add name property back to the object, with value of "Mike", and then console log object.
-
-// BONUS: Try to set name with value it had before.
-
-var someData = {
-	name: "Peter",
-	lastName: "Dinklage",
-	status: "married"
-};
-
-console.log(someData);
-
-someData.name = function() {
-
-	if(someData.name) {
-		var name = someData.name;
-		
-		someData.removeName = function(name) {
-			this.name = name;
-			
-			delete someData.name;
-			console.log(someData)
-			
-			someData.addName = function(name) {
-				this.name = name;
-				someData.name = name;
-				console.log(someData);
-			}
-			someData.addName(name);
+		var fullname = 'John Doe';
+		var obj = {
+		   fullname: 'Colin Ihrig',
+		   prop: {
+		      fullname: 'Aurelio De Rosa',
+		      getFullname: function() {
+		         return this.fullname;
+		      }
+		   }
 		};
-		someData.removeName(name);
-	} 
-}
 
-someData.name();
+		console.log(obj.prop.getFullname());
+
+		var test = obj.prop.getFullname;
+
+		console.log(test());
 
 
+	// QUESTION 4:
+
+	// What will you see in the console for the following example?
+
+	// ANSWER: I will probably see 1
+
+		var a = 1; 
+		function b() { 
+		    a = 10; 
+		    return; 
+		    function a() {} 
+		} 
+		b(); 
+		console.log(a);
