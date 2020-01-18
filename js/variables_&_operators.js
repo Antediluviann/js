@@ -1123,7 +1123,7 @@ function name(i) {
 		console.log(a);
 
 
-		// PREDIFINED FUNCTIONS
+// PREDIFINED FUNCTIONS
 
 
 // TASK 1: Based on given string: "Lorem ipsum dolor sit amet". Create a function that should receive string, and transform all letters to lowercase.
