@@ -1121,3 +1121,194 @@ function name(i) {
 		} 
 		b(); 
 		console.log(a);
+
+
+		// PREDIFINED FUNCTIONS
+
+
+// TASK 1: Based on given string: "Lorem ipsum dolor sit amet". Create a function that should receive string, and transform all letters to lowercase.
+
+var string = "Lorem ipsum dolor sit amet";
+
+function lower(string) {
+
+	console.log(string.toLowerCase());
+}
+lower(string);
+
+// TASK 2: Based on given string: "Lorem ipsum dolor sit amet". Create a function that should check if there is a word "sit" in the string, and console log sentence saying that it exist or not.
+
+function findSit(string, word) {
+
+	if(string.indexOf(word) > -1) {
+		console.log(word.concat(" exist in a string."));
+	} else {
+		console.log(word.concat(" doesn't exist in a string."));
+	}
+}
+
+var word = "sit";
+
+findSit(string, word);
+
+// TASK 3: Based on given string: "Lorem ipsum dolor sit amet". Create a function that should find and return index of the last letter in the sentence.
+
+function lastLetter(string) {
+
+	var position = string.length;
+	var returnIndex = string.charAt(position - 1);
+	console.log("The last letter is " + returnIndex.concat(" and it position is ",position));
+}
+lastLetter(string);
+
+// TASK 4: Based on given string: "Lorem ipsum dolor sit amet". Create a function that should split string based on empty space, and return first 3 results.
+
+
+function splitString(string) {
+
+	console.log(string.split(" ", 3));
+}
+
+splitString(string);
+
+// TASK 5: Based on given string: "Piter is an actor.". Create a function that should turn a string into the following string: "Pitor is an acter."
+
+string = "Piter is an actor.";
+var firstWord = "Piter";
+var secondWord = "actor";
+
+
+function wrongLetter(word) { 
+						
+	var item = [];		 
+						
+	if(string.indexOf(word) > -1) {
+		
+		item[item.length] = word.substring(0, word.length - 2);
+		item[item.length] = word.substring(word.length - 2, word.length);
+	} else {
+		console.log(word.concat(" do NOT exist in a string."));
+	}
+
+	return item;
+}
+
+
+function concat() {		
+	var newWords = [];	
+
+  	var firstWordParts = wrongLetter(firstWord);
+  	var firstWordPartOne = firstWordParts[0];
+  	var firstWordPartTwo = firstWordParts[1];
+
+  	var secondWordParts = wrongLetter(secondWord);
+  	var secondWordPartOne = secondWordParts[0];
+  	var secondWordPartTwo = secondWordParts[1];
+
+  	newWords[newWords.length] = firstWordPartOne.concat(secondWordPartTwo);
+  	newWords[newWords.length] = secondWordPartOne.concat(firstWordPartTwo);
+
+  	return newWords;
+  }
+
+ 
+function replaceLetters(string, firstWord, secondWord) { 
+
+	var txt = string.substring(firstWord.length, string.length - secondWord.length - 1);
+												
+	var newWords = concat();					
+	var firstWordNew = newWords[0];
+	var secondWordNew = newWords[1];
+										
+	var result = firstWordNew.concat(txt, secondWordNew);
+	console.log(result);
+}
+
+replaceLetters(string, firstWord, secondWord);
+
+// TASK 6: Based on given array: var someData = [34, 23, 14, 56, 23, 44, 65]; Create a function that should remove number 56 from an array and return array without it.
+
+var someData = [34, 23, 14, 56, 23, 44, 65];
+
+function removeNumber(someData) {
+
+	var index = someData.indexOf(56);
+
+	someData.splice(index,1);
+	console.log(someData);
+}
+
+removeNumber(someData);
+
+// TASK 7: Based on given array: var someData = [34, 23, 14, 56, 23, 44, 65]; Create a function that should turn it into following array: var otherData = [23, 14, 56, 65, 44, 23]
+
+
+var someData = [34, 23, 14, 56, 23, 44, 65];
+
+function morph(someData) {
+	var otherData = [];
+
+	someData.shift(); 
+	var removed = someData.splice(3,someData.length - 1)
+	removed.reverse(); 
+	otherData = someData.concat(removed); 
+    console.log(otherData);
+}
+
+morph(someData);
+
+// TASK 8: Based on given array: var someData = [334, 233, 212, 199, 154, 122] Create a function that should repack array to the new one, where each grade should be current one, reduced by value of previous one from initial array.
+
+
+var someData = [334, 233, 212, 199, 154, 122];
+
+function repackData(someData) {
+	var someOtherData = [];
+
+	someData.forEach(function(item) {
+
+		someOtherData[someOtherData.length] = item;
+	});
+
+	console.log(someOtherData);
+}
+
+repackData(someData);
+
+// TASK 9: Based on given array: Create a function that should return new array with all students whose average grade is larger than 8.5. In new array, average grade should be formatted to 2 decimals.
+
+var students = [
+  {
+     name: "Jim",
+     avgGrade: 8.5556
+  },
+  {
+     name: "Mike",
+     avgGrade: 8.5492
+  },
+  {
+     name: "Anna",
+     avgGrade: 8.9322
+  },
+  {
+     name: "Jack",
+     avgGrade: 8.6111
+  }
+]
+
+function averageGrade(students) {
+
+	var newData = [];
+
+	students.forEach(function(grade) {
+		if(grade.avgGrade >= 8.6) {
+			grade.avgGrade = grade.avgGrade.toFixed(2);
+			newData[newData.length] = grade;
+		}
+	})
+
+	console.log(newData);
+
+}
+
+averageGrade(students);
