@@ -308,7 +308,7 @@
 // 		var temoporary = greatestNumber;
 // 		greatestNumber = secondGreatest;
 // 		secondGreatest = temoporary;
-	
+
 // 	} for (var i = 0; i < numb.length; i++) {
 // 		if (numb[i] > greatestNumber) {
 // 			greatestNumber = numb[i];
@@ -447,7 +447,7 @@
 // 			bigNumb = bigNumb;
 // 		}
 // 	}
-	
+
 
 // 	for(i = 0; i < uninumb.length; i++) {
 // 		if(bigNumb == uninumb[i]) {
@@ -462,7 +462,7 @@
 // var printArr = function(numbArr, deleteBiggest) {
 
 // 	var uninumb = [];
-	
+
 
 // 	for(i = 0; i < numbArr.length; i++) {
 // 		var k = 0;
@@ -479,7 +479,7 @@
 // 	}
 
 //  deleteBiggest(uninumb);
-	
+
 // }
 
 // printArr(numbArr, deleteBiggest);
@@ -541,7 +541,7 @@
 // }
 
 // var children = [
-	
+
 // 	{
 // 		name: "Bobo",
 // 		age: 7,
@@ -613,12 +613,12 @@
 // function repack(finder, students) {
 
 // 	var data = [];	
-	
+
 //     for(i = 0; i < students.length; i++) {
-		
+
 // 			data[i] = students[i][finder];
 // 		}	
-	
+
 // 	return data;
 // }
 
@@ -645,7 +645,7 @@
 // var newObject = Object.create(person);
 
 // function inheritData(newObject, person) {
-    
+
 //     newObject.age === person.age;
 // 	newObject.name === person.name;
 // 	newObject.married === person.married;
@@ -815,7 +815,7 @@
 // 		}
 // 	}
 // 	return arr3;
-	
+
 // }
 
 // function getTogether(someData, someOtherData) {
@@ -883,13 +883,13 @@
 
 // 	if(someData.name) {
 // 		var name = someData.name;
-		
+
 // 		someData.removeName = function(name) {
 // 			this.name = name;
-			
+
 // 			delete someData.name;
 // 			console.log(someData)
-			
+
 // 			someData.addName = function(name) {
 // 				this.name = name;
 // 				someData.name = name;
@@ -908,407 +908,552 @@
 
 // TASK 1: Create a constructor function for generating student objects. Each student object should have name, last name, age and average grade.
 
-function student(student) {
+// function student(student) {
 
-	this.name = student[0];
-	this.lastName = student[1];
-	this.age = student[2];
-	this.averageGrade = student[3];
+// 	this.name = student[0];
+// 	this.lastName = student[1];
+// 	this.age = student[2];
+// 	this.averageGrade = student[3];
+// }
+
+// var data = [
+// 	["Vlad", "The Impaler", 31, 8.5],
+// 	["Geralt", "of Rivia", 123, 9],
+// 	["Vesemir", "the Master", 325, 10],
+// 	["Yennefer", "of Vengerberg", 35, 6],
+// ];
+
+// function list(data) {
+
+// 	for(i = 0; i < data.length; i++) {
+// 		this[data[i][0].toLowerCase()] = new student(data[i]);
+// 	}
+// };
+
+// list(data);
+
+// console.log(vlad, geralt, vesemir, yennefer);
+
+// // TASK 2: Create a constructor function for generating objects with data about players of your favorite football team (name, age, goals scored, yellow cards). You can find statistics online.
+
+// function player(name, age, pointsScored, fouls) {
+
+// 	this.name = name;
+// 	this.age = age;
+// 	this.pointsScored = pointsScored;
+// 	this.fouls = fouls;
+// }	
+
+// var nikolaJokic = new player("Nikola", 24, 19.2, 3);
+// var jamalMurray = new player("Jamal", 22, 17.6, 1.7);
+// var garryHarris = new player("Garry", 27, 11, 2.4);
+// var malikBeasly = new player("Malik", 23, 16.7, 1.2);
+// var masonPlumlee = new player("Mason", 29, 7.3, 1);
+
+
+// console.log(nikolaJokic, jamalMurray, garryHarris, malikBeasly, masonPlumlee);
+
+
+// // TASK 3: Try to do the same thing as in the previous task, but when creating player objects try to do it dinammicaly (usign loop). For that you'll need data in following format: var players = [["Player name", 27, 12, 4], ["Player name", 27, 12, 4], ["Player name", 27, 12, 4]];
+
+// function Player(player) {
+
+// 	this.name = player[0];
+// 	this.lastName = player[1];
+// 	this.age = player[2];
+// 	this.pointsScored = player[3];
+// 	this.fouls = player[4];
+// }	
+
+// var denver = [
+// 	["Nikola","Jokic", 24, 19.2, 3],
+// 	["Jamal","Murray", 22, 17.6, 1.7],
+// 	["Garry","Harris", 27, 11, 2.4],
+// 	["Malik","Beasly", 23, 16.7, 1.2],
+// 	["Mason","Plumlee", 29, 7.3, 1],
+// ];
+
+// function topPlayers(players) {
+
+// 	for(i = 0; i < players.length; i++) {
+// 		this[players[i][0].toLowerCase() + "_" + players[i][1].toLowerCase()] = new Player(players[i]);
+// 	}
+// };
+
+// topPlayers(denver);
+
+// console.log(nikola_jokic,jamal_murray,garry_harris,malik_beasly,mason_plumlee);
+
+
+// //TASK 4: Create a construction function that should contain properties for first number, second number, and method. Then create a four instances of object from that constructor, each with different numbers, and different method. First should have method for multiplying of its own numbers, second for dividing, third for adding and fourth for subtracting.
+
+
+// function calculus(item) {
+
+// 	this.firstNumber = item[0];
+// 	this.secondNumber = item[1];
+// 	this.sign = item[2];
+// 	this.operation = function(firstNumber, secondNumber, sign) {
+
+// 						var result;
+// 						if(this.sign === "-"){
+// 							result = this.firstNumber - this.secondNumber;
+// 						} else if(this.sign === "+") {
+// 							result = this.firstNumber + this.secondNumber;
+// 						} else if(this.sign === "/") {
+// 							result = this.firstNumber / this.secondNumber;
+// 						} else if(this.sign === "*") {
+// 							result = this.firstNumber * this.secondNumber;
+// 						}
+
+// 						return result;
+// 					}
+// }
+
+// var arr = [
+
+// 	[11, 23, "*"],
+// 	[7, 3, "/"],
+// 	[17, 9, "+"],
+// 	[43, 69, "-"],
+
+// ]
+
+// for(var i = 0; i < arr.length; i++) {
+// 	this[name(i)] = new calculus(arr[i]);
+// 	console.log(this[name(i)]);
+// }
+
+// function name(i) {
+// 	var orderedNumber;
+
+// 	if(i === 0) {
+// 		orderedNumber = "Zero";
+// 	} else if(i === 1) {
+// 		orderedNumber = "One";
+// 	} else if(i === 2) {
+// 		orderedNumber = "Two";
+// 	} else if(i ===3) {
+// 		orderedNumber = "Three";
+// 	}
+
+// 	return "object" + orderedNumber;
+// }
+
+// //TASK 5: Test your understanding of closures and scope with following examples. IMPORTANT! - First read the task and try to give an answer, and then copy the code to your file and check what do you get in console.
+
+//     // QUESTION 1:
+
+// 	// What’s the result of executing this code and why? 
+
+// 	// ANSWER: The result is undefined because the return 2 is not defined.
+
+// 		function test() {
+// 		   console.log(a);
+// 		   console.log(foo());
+
+// 		   var a = 1;
+// 		   function foo() {
+// 		      return 2;
+// 		   }
+// 		}
+
+// 		test();
+
+
+// 	// QUESTION 2:
+
+// 	// What is result?
+
+// 	// ANSWER: the result is 2
+
+// 		var a = 1; 
+
+// 		function someFunction(number) {
+// 		  function otherFunction(input) {
+// 		    return a;
+// 		  }
+
+// 		  a = 5;
+
+// 		  return otherFunction;
+// 		}
+
+// 		var firstResult = someFunction(9);
+// 		var result = firstResult(2);
+
+
+// 	// QUESTION 3:
+
+// 	// What is the result of the following code? Explain your answer.
+
+// 	// ANSWER: the result is Aurelio De Rosa and John Doe. The first console log is getting an obj. prop from get full name function and the second console log is logging var test.
+
+// 		var fullname = 'John Doe';
+// 		var obj = {
+// 		   fullname: 'Colin Ihrig',
+// 		   prop: {
+// 		      fullname: 'Aurelio De Rosa',
+// 		      getFullname: function() {
+// 		         return this.fullname;
+// 		      }
+// 		   }
+// 		};
+
+// 		console.log(obj.prop.getFullname());
+
+// 		var test = obj.prop.getFullname;
+
+// 		console.log(test());
+
+
+// 	// QUESTION 4:
+
+// 	// What will you see in the console for the following example?
+
+// 	// ANSWER: I will probably see 1
+
+// 		var a = 1; 
+// 		function b() { 
+// 		    a = 10; 
+// 		    return; 
+// 		    function a() {} 
+// 		} 
+// 		b(); 
+// 		console.log(a);
+
+
+// // PREDIFINED FUNCTIONS
+
+
+// // TASK 1: Based on given string: "Lorem ipsum dolor sit amet". Create a function that should receive string, and transform all letters to lowercase.
+
+// var string = "Lorem ipsum dolor sit amet";
+
+// function lower(string) {
+
+// 	console.log(string.toLowerCase());
+// }
+// lower(string);
+
+// // TASK 2: Based on given string: "Lorem ipsum dolor sit amet". Create a function that should check if there is a word "sit" in the string, and console log sentence saying that it exist or not.
+
+// function findSit(string, word) {
+
+// 	if(string.indexOf(word) > -1) {
+// 		console.log(word.concat(" exist in a string."));
+// 	} else {
+// 		console.log(word.concat(" doesn't exist in a string."));
+// 	}
+// }
+
+// var word = "sit";
+
+// findSit(string, word);
+
+// // TASK 3: Based on given string: "Lorem ipsum dolor sit amet". Create a function that should find and return index of the last letter in the sentence.
+
+// function lastLetter(string) {
+
+// 	var position = string.length;
+// 	var returnIndex = string.charAt(position - 1);
+// 	console.log("The last letter is " + returnIndex.concat(" and it position is ",position));
+// }
+// lastLetter(string);
+
+// // TASK 4: Based on given string: "Lorem ipsum dolor sit amet". Create a function that should split string based on empty space, and return first 3 results.
+
+
+// function splitString(string) {
+
+// 	console.log(string.split(" ", 3));
+// }
+
+// splitString(string);
+
+// // TASK 5: Based on given string: "Piter is an actor.". Create a function that should turn a string into the following string: "Pitor is an acter."
+
+// string = "Piter is an actor.";
+// var firstWord = "Piter";
+// var secondWord = "actor";
+
+
+// function wrongLetter(word) { 
+
+// 	var item = [];		 
+
+// 	if(string.indexOf(word) > -1) {
+
+// 		item[item.length] = word.substring(0, word.length - 2);
+// 		item[item.length] = word.substring(word.length - 2, word.length);
+// 	} else {
+// 		console.log(word.concat(" do NOT exist in a string."));
+// 	}
+
+// 	return item;
+// }
+
+
+// function concat() {		
+// 	var newWords = [];	
+
+//   	var firstWordParts = wrongLetter(firstWord);
+//   	var firstWordPartOne = firstWordParts[0];
+//   	var firstWordPartTwo = firstWordParts[1];
+
+//   	var secondWordParts = wrongLetter(secondWord);
+//   	var secondWordPartOne = secondWordParts[0];
+//   	var secondWordPartTwo = secondWordParts[1];
+
+//   	newWords[newWords.length] = firstWordPartOne.concat(secondWordPartTwo);
+//   	newWords[newWords.length] = secondWordPartOne.concat(firstWordPartTwo);
+
+//   	return newWords;
+//   }
+
+
+// function replaceLetters(string, firstWord, secondWord) { 
+
+// 	var txt = string.substring(firstWord.length, string.length - secondWord.length - 1);
+
+// 	var newWords = concat();					
+// 	var firstWordNew = newWords[0];
+// 	var secondWordNew = newWords[1];
+
+// 	var result = firstWordNew.concat(txt, secondWordNew);
+// 	console.log(result);
+// }
+
+// replaceLetters(string, firstWord, secondWord);
+
+// // TASK 6: Based on given array: var someData = [34, 23, 14, 56, 23, 44, 65]; Create a function that should remove number 56 from an array and return array without it.
+
+// var someData = [34, 23, 14, 56, 23, 44, 65];
+
+// function removeNumber(someData) {
+
+// 	var index = someData.indexOf(56);
+
+// 	someData.splice(index,1);
+// 	console.log(someData);
+// }
+
+// removeNumber(someData);
+
+// // TASK 7: Based on given array: var someData = [34, 23, 14, 56, 23, 44, 65]; Create a function that should turn it into following array: var otherData = [23, 14, 56, 65, 44, 23]
+
+
+// var someData = [34, 23, 14, 56, 23, 44, 65];
+
+// function morph(someData) {
+// 	var otherData = [];
+
+// 	someData.shift(); 
+// 	var removed = someData.splice(3,someData.length - 1)
+// 	removed.reverse(); 
+// 	otherData = someData.concat(removed); 
+//     console.log(otherData);
+// }
+
+// morph(someData);
+
+// // TASK 8: Based on given array: var someData = [334, 233, 212, 199, 154, 122] Create a function that should repack array to the new one, where each grade should be current one, reduced by value of previous one from initial array.
+
+
+// var someData = [334, 233, 212, 199, 154, 122];
+
+// function repackData(someData) {
+// 	var someOtherData = [];
+
+// 	someData.forEach(function(item) {
+
+// 		someOtherData[someOtherData.length] = item;
+// 	});
+
+// 	console.log(someOtherData);
+// }
+
+// repackData(someData);
+
+// // TASK 9: Based on given array: Create a function that should return new array with all students whose average grade is larger than 8.5. In new array, average grade should be formatted to 2 decimals.
+
+// var students = [
+//   {
+//      name: "Jim",
+//      avgGrade: 8.5556
+//   },
+//   {
+//      name: "Mike",
+//      avgGrade: 8.5492
+//   },
+//   {
+//      name: "Anna",
+//      avgGrade: 8.9322
+//   },
+//   {
+//      name: "Jack",
+//      avgGrade: 8.6111
+//   }
+// ]
+
+// function averageGrade(students) {
+
+// 	var newData = [];
+
+// 	students.forEach(function(grade) {
+// 		if(grade.avgGrade >= 8.6) {
+// 			grade.avgGrade = grade.avgGrade.toFixed(2);
+// 			newData[newData.length] = grade;
+// 		}
+// 	})
+
+// 	console.log(newData);
+
+// }
+
+// averageGrade(students);
+
+// BOM HOMEWORK
+
+// TASK 1: Create a function that will ALERT if browser is online or not
+
+function funcAlert() {
+
+	if(window.navigator["onLine"]) {
+
+		alert("The browser is online!")
+	} else {
+
+		window.navigator["onLine"] = false;
+		alert("The browser is offline!");
+	}
+
 }
 
-var data = [
-	["Vlad", "The Impaler", 31, 8.5],
-	["Geralt", "of Rivia", 123, 9],
-	["Vesemir", "the Master", 325, 10],
-	["Yennefer", "of Vengerberg", 35, 6],
-];
+funcAlert();
 
-function list(data) {
+// TASK 2: Create a function that should, when run, reload the page.
 
-	for(i = 0; i < data.length; i++) {
-		this[data[i][0].toLowerCase()] = new student(data[i]);
-	}
-};
+function reloadPage() {
 
-list(data);
+	window.location.reload();
 
-console.log(vlad, geralt, vesemir, yennefer);
-
-// TASK 2: Create a constructor function for generating objects with data about players of your favorite football team (name, age, goals scored, yellow cards). You can find statistics online.
-
-function player(name, age, pointsScored, fouls) {
-
-	this.name = name;
-	this.age = age;
-	this.pointsScored = pointsScored;
-	this.fouls = fouls;
-}	
-
-var nikolaJokic = new player("Nikola", 24, 19.2, 3);
-var jamalMurray = new player("Jamal", 22, 17.6, 1.7);
-var garryHarris = new player("Garry", 27, 11, 2.4);
-var malikBeasly = new player("Malik", 23, 16.7, 1.2);
-var masonPlumlee = new player("Mason", 29, 7.3, 1);
-
-
-console.log(nikolaJokic, jamalMurray, garryHarris, malikBeasly, masonPlumlee);
-
-
-// TASK 3: Try to do the same thing as in the previous task, but when creating player objects try to do it dinammicaly (usign loop). For that you'll need data in following format: var players = [["Player name", 27, 12, 4], ["Player name", 27, 12, 4], ["Player name", 27, 12, 4]];
-
-function Player(player) {
-
-	this.name = player[0];
-	this.lastName = player[1];
-	this.age = player[2];
-	this.pointsScored = player[3];
-	this.fouls = player[4];
-}	
-
-var denver = [
-	["Nikola","Jokic", 24, 19.2, 3],
-	["Jamal","Murray", 22, 17.6, 1.7],
-	["Garry","Harris", 27, 11, 2.4],
-	["Malik","Beasly", 23, 16.7, 1.2],
-	["Mason","Plumlee", 29, 7.3, 1],
-];
-
-function topPlayers(players) {
-
-	for(i = 0; i < players.length; i++) {
-		this[players[i][0].toLowerCase() + "_" + players[i][1].toLowerCase()] = new Player(players[i]);
-	}
-};
-
-topPlayers(denver);
-
-console.log(nikola_jokic,jamal_murray,garry_harris,malik_beasly,mason_plumlee);
-
-
-//TASK 4: Create a construction function that should contain properties for first number, second number, and method. Then create a four instances of object from that constructor, each with different numbers, and different method. First should have method for multiplying of its own numbers, second for dividing, third for adding and fourth for subtracting.
-
-
-function calculus(item) {
-
-	this.firstNumber = item[0];
-	this.secondNumber = item[1];
-	this.sign = item[2];
-	this.operation = function(firstNumber, secondNumber, sign) {
-
-						var result;
-						if(this.sign === "-"){
-							result = this.firstNumber - this.secondNumber;
-						} else if(this.sign === "+") {
-							result = this.firstNumber + this.secondNumber;
-						} else if(this.sign === "/") {
-							result = this.firstNumber / this.secondNumber;
-						} else if(this.sign === "*") {
-							result = this.firstNumber * this.secondNumber;
-						}
-
-						return result;
-					}
 }
 
-var arr = [
+// reloadPage();
 
-	[11, 23, "*"],
-	[7, 3, "/"],
-	[17, 9, "+"],
-	[43, 69, "-"],
 
+// TASK 3: Create a function that should, 3 seconds after page is loaded, redirect you to google.com, and then, 3 seconds after that take you back to your page. (Comment out your code once you"re done so you can continue with the other tasks, as this will cause infinite loop).
+
+function loadPage() {
+
+	window.location.href = "http://www.google.com";
+	setTimeout(function() {
+
+		window.history.back()
+
+	}, 3000)
+
+}
+
+// setTimeout(loadPage, 3000) 
+
+// TASK 4: Crete a function that should every second console log a number incremented by one. When number reach 15 it should stop running.
+
+var num = 0;
+
+function incrementNumber () {
+
+	num++;
+	console.log(num);
+
+	if(num >= 15) {
+
+		clearInterval(i);
+	}
+
+}
+
+var i = setInterval(incrementNumber, 1000)
+
+// TASK 5: Create a function that should return a random number (round number) between 0 and 10, every time you run it.
+
+
+function randomNumber() {
+
+	console.log(Math.floor(Math.random()*10));
+}
+
+randomNumber();
+
+// TASK 6: STEP 1 Create an array of objects, containing at least 5 rapLegends. Each of them should have name, age and status. Status should be "inactive" for each of them. 
+
+// STEP 2 Once page is loaded it should display a popup where user can enter his name. Once it"s done name user entered should be compared against existing rapLegends. If it doesn"t match any user you should console log message: "User with name " + name + " doesn"t exist." If it match some of users, object with that user"s data should be copied from array. It"s status should be changed to "active", and it should be saved in local storage using "loggedInUser" as a key.
+
+//STEP 3 After one minute user"s data should be removed from local storage. You should console log a message that user is logged out.
+
+var rapLegends = [
+{
+	name: "Tupac",
+	age: 25,
+	status: "inactive"
+},
+{
+	name: "Common",
+	age: 60,
+	status: "inactive"
+},
+{
+	name: "Killer Mike",
+	age: 45,
+	status: "inactive"
+},
+{
+	name: "Dr.Dre",
+	age: 56,
+	status: "inactive"
+},
+{
+	name: "Eminem",
+	age: 47,
+	status: "inactive"
+},
 ]
 
-for(var i = 0; i < arr.length; i++) {
-	this[name(i)] = new calculus(arr[i]);
-	console.log(this[name(i)]);
-}
 
-function name(i) {
-	var orderedNumber;
+function check(rapLegends) {
 
-	if(i === 0) {
-		orderedNumber = "Zero";
-	} else if(i === 1) {
-		orderedNumber = "One";
-	} else if(i === 2) {
-		orderedNumber = "Two";
-	} else if(i ===3) {
-		orderedNumber = "Three";
+	var name = prompt("What's your name?"); 
+
+	var trueOrfalse = rapLegends.some(function(user) { 
+		return user.name.toLowerCase() === name.toLowerCase()
+	})
+
+	if(trueOrfalse === false) {
+		console.log("User with name " + name + " doesn't exist.");
 	}
 
-	return "object" + orderedNumber;
-}
 
-//TASK 5: Test your understanding of closures and scope with following examples. IMPORTANT! - First read the task and try to give an answer, and then copy the code to your file and check what do you get in console.
+	var existingUser = [];
 
-    // QUESTION 1:
-
-	// What’s the result of executing this code and why? 
-
-	// ANSWER: The result is undefined because the return 2 is not defined.
-
-		function test() {
-		   console.log(a);
-		   console.log(foo());
-		   
-		   var a = 1;
-		   function foo() {
-		      return 2;
-		   }
-		}
-
-		test();
-
-
-	// QUESTION 2:
-
-	// What is result?
-
-	// ANSWER: the result is 2
-
-		var a = 1; 
-
-		function someFunction(number) {
-		  function otherFunction(input) {
-		    return a;
-		  }
-		  
-		  a = 5;
-		  
-		  return otherFunction;
-		}
-
-		var firstResult = someFunction(9);
-		var result = firstResult(2);
-
-
-	// QUESTION 3:
-
-	// What is the result of the following code? Explain your answer.
-
-	// ANSWER: the result is Aurelio De Rosa and John Doe. The first console log is getting an obj. prop from get full name function and the second console log is logging var test.
-
-		var fullname = 'John Doe';
-		var obj = {
-		   fullname: 'Colin Ihrig',
-		   prop: {
-		      fullname: 'Aurelio De Rosa',
-		      getFullname: function() {
-		         return this.fullname;
-		      }
-		   }
-		};
-
-		console.log(obj.prop.getFullname());
-
-		var test = obj.prop.getFullname;
-
-		console.log(test());
-
-
-	// QUESTION 4:
-
-	// What will you see in the console for the following example?
-
-	// ANSWER: I will probably see 1
-
-		var a = 1; 
-		function b() { 
-		    a = 10; 
-		    return; 
-		    function a() {} 
-		} 
-		b(); 
-		console.log(a);
-
-
-// PREDIFINED FUNCTIONS
-
-
-// TASK 1: Based on given string: "Lorem ipsum dolor sit amet". Create a function that should receive string, and transform all letters to lowercase.
-
-var string = "Lorem ipsum dolor sit amet";
-
-function lower(string) {
-
-	console.log(string.toLowerCase());
-}
-lower(string);
-
-// TASK 2: Based on given string: "Lorem ipsum dolor sit amet". Create a function that should check if there is a word "sit" in the string, and console log sentence saying that it exist or not.
-
-function findSit(string, word) {
-
-	if(string.indexOf(word) > -1) {
-		console.log(word.concat(" exist in a string."));
-	} else {
-		console.log(word.concat(" doesn't exist in a string."));
-	}
-}
-
-var word = "sit";
-
-findSit(string, word);
-
-// TASK 3: Based on given string: "Lorem ipsum dolor sit amet". Create a function that should find and return index of the last letter in the sentence.
-
-function lastLetter(string) {
-
-	var position = string.length;
-	var returnIndex = string.charAt(position - 1);
-	console.log("The last letter is " + returnIndex.concat(" and it position is ",position));
-}
-lastLetter(string);
-
-// TASK 4: Based on given string: "Lorem ipsum dolor sit amet". Create a function that should split string based on empty space, and return first 3 results.
-
-
-function splitString(string) {
-
-	console.log(string.split(" ", 3));
-}
-
-splitString(string);
-
-// TASK 5: Based on given string: "Piter is an actor.". Create a function that should turn a string into the following string: "Pitor is an acter."
-
-string = "Piter is an actor.";
-var firstWord = "Piter";
-var secondWord = "actor";
-
-
-function wrongLetter(word) { 
-						
-	var item = [];		 
-						
-	if(string.indexOf(word) > -1) {
-		
-		item[item.length] = word.substring(0, word.length - 2);
-		item[item.length] = word.substring(word.length - 2, word.length);
-	} else {
-		console.log(word.concat(" do NOT exist in a string."));
-	}
-
-	return item;
-}
-
-
-function concat() {		
-	var newWords = [];	
-
-  	var firstWordParts = wrongLetter(firstWord);
-  	var firstWordPartOne = firstWordParts[0];
-  	var firstWordPartTwo = firstWordParts[1];
-
-  	var secondWordParts = wrongLetter(secondWord);
-  	var secondWordPartOne = secondWordParts[0];
-  	var secondWordPartTwo = secondWordParts[1];
-
-  	newWords[newWords.length] = firstWordPartOne.concat(secondWordPartTwo);
-  	newWords[newWords.length] = secondWordPartOne.concat(firstWordPartTwo);
-
-  	return newWords;
-  }
-
- 
-function replaceLetters(string, firstWord, secondWord) { 
-
-	var txt = string.substring(firstWord.length, string.length - secondWord.length - 1);
-												
-	var newWords = concat();					
-	var firstWordNew = newWords[0];
-	var secondWordNew = newWords[1];
-										
-	var result = firstWordNew.concat(txt, secondWordNew);
-	console.log(result);
-}
-
-replaceLetters(string, firstWord, secondWord);
-
-// TASK 6: Based on given array: var someData = [34, 23, 14, 56, 23, 44, 65]; Create a function that should remove number 56 from an array and return array without it.
-
-var someData = [34, 23, 14, 56, 23, 44, 65];
-
-function removeNumber(someData) {
-
-	var index = someData.indexOf(56);
-
-	someData.splice(index,1);
-	console.log(someData);
-}
-
-removeNumber(someData);
-
-// TASK 7: Based on given array: var someData = [34, 23, 14, 56, 23, 44, 65]; Create a function that should turn it into following array: var otherData = [23, 14, 56, 65, 44, 23]
-
-
-var someData = [34, 23, 14, 56, 23, 44, 65];
-
-function morph(someData) {
-	var otherData = [];
-
-	someData.shift(); 
-	var removed = someData.splice(3,someData.length - 1)
-	removed.reverse(); 
-	otherData = someData.concat(removed); 
-    console.log(otherData);
-}
-
-morph(someData);
-
-// TASK 8: Based on given array: var someData = [334, 233, 212, 199, 154, 122] Create a function that should repack array to the new one, where each grade should be current one, reduced by value of previous one from initial array.
-
-
-var someData = [334, 233, 212, 199, 154, 122];
-
-function repackData(someData) {
-	var someOtherData = [];
-
-	someData.forEach(function(item) {
-
-		someOtherData[someOtherData.length] = item;
-	});
-
-	console.log(someOtherData);
-}
-
-repackData(someData);
-
-// TASK 9: Based on given array: Create a function that should return new array with all students whose average grade is larger than 8.5. In new array, average grade should be formatted to 2 decimals.
-
-var students = [
-  {
-     name: "Jim",
-     avgGrade: 8.5556
-  },
-  {
-     name: "Mike",
-     avgGrade: 8.5492
-  },
-  {
-     name: "Anna",
-     avgGrade: 8.9322
-  },
-  {
-     name: "Jack",
-     avgGrade: 8.6111
-  }
-]
-
-function averageGrade(students) {
-
-	var newData = [];
-
-	students.forEach(function(grade) {
-		if(grade.avgGrade >= 8.6) {
-			grade.avgGrade = grade.avgGrade.toFixed(2);
-			newData[newData.length] = grade;
+	rapLegends.forEach(function(element) {
+		if(element.name.toLowerCase() === name.toLowerCase()){
+			element.status = "active";
+			existingUser[existingUser.length] = element;
+			localStorage.setItem("loggedInUser", element.name)
 		}
 	})
 
-	console.log(newData);
+	setTimeout(logout, 60000);
+}
+
+
+function logout() { 
+
+	localStorage.removeItem("loggedInUser");
+	console.log ("User is logged out!");
 
 }
 
-averageGrade(students);
+check(rapLegends);
+
